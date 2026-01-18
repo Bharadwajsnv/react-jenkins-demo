@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import config from "./env";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: "40px", fontFamily: "Arial" }}>
+      <h1>React + Jenkins Environment Demo</h1>
+
+      <p>
+        <strong>Running Environment:</strong> {config.env}
+      </p>
+
+      <p>
+        <strong>API URL:</strong> {config.apiUrl}
+      </p>
+
+      <p>
+        <strong>Build Time:</strong> {new Date().toString()}
+      </p>
     </div>
   );
 }
