@@ -18,13 +18,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Build') {
             steps {
-                sh "npm run build:${params.ENV}"
+                bat "npm run build:${params.ENV}"
             }
         }
     }
